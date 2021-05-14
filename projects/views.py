@@ -15,7 +15,9 @@ def Home(request):
             "portfolios": response.json(),
         }
     else:
-        context = {"error": "Bad response!"}
+        context = {
+            "portfolios": {},
+            "error": "Bad response!"}
 
 
     return render(request, template_name, context)
