@@ -4,13 +4,11 @@ from django.conf import settings
 from .models import Portfolio
 
 
-def home(request):
+def Home(request):
     template_name = "index.html"
     # portfolios = Portfolio.objects.all()
     # context = {'portfolios': portfolios}
     response = requests.get("http://127.0.0.1:8000/api/portfolio/")
-
-    print(settings.STATIC_ROOT)
 
     if response.status_code == 200:
         context = {
@@ -21,3 +19,15 @@ def home(request):
 
 
     return render(request, template_name, context)
+
+def PortfolioDetail(request, pk):
+    
+    template_name = "detail.html"
+    
+    detail = Portfolio.objects.filter(pk=pk).first()
+
+    context = {
+        'detail': detail
+    }
+
+    return render (request, template_name, context)

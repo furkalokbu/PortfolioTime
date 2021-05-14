@@ -38,32 +38,57 @@
     </div>
     </div>
 
-    <!-- Portfolio Section -->
-
-    <section id="portfolio">
+    <section id="blog-single-post">
         <div class="container">
-            {{item.main_image.url}}
-            <div class="row">
-                {% for item in portfolios %}
-                <div class="col-md-4 col-sm-6">
-                    <a href="/">
-                         <div class="portfolio-thumb">
-                              <img src="{% static '/images/portfolio-img3.jpg' %}" class="img-responsive" alt="Portfolio">
-                                   <div class="portfolio-overlay">
-                                        <div class="portfolio-item">
-                                             <h3>{{ item.title|safe|truncatechars:20 }}</h3>
-                                             <small>{{ item.description|safe|truncatechars:100 }}</small>
-                                        </div>
-                                   </div>
-                         </div>
-                    </a>
-               </div>
-
-                {% endfor %}
-
-            </div>
+             <div class="row">
+   
+                  <div class="col-md-offset-1 col-md-10 col-sm-12">
+                       <div class="blog-single-post-thumb">
+                            <div class="blog-post-image">
+                                <!-- <img src="{{ detail.main_image.url }}" class="img-responsive" alt="Blog Image">  -->
+                                <img src="{% static 'images/blog-image1.jpg' %}" class="img-responsive" alt="Blog Image">
+                            </div>
+   
+                            <div class="blog-post-title">
+                                 <h2>We Help You Create Perfect Modern Design</a></h2>
+                            </div>
+   
+                            <div class="blog-post-format">
+                                 <span><i class="fa fa-date"></i> Jan 30, 2016</span>
+                                 <span><a href="#"><i class="fa fa-comment-o"></i> 124 Comments</a></span>
+                            </div>
+   
+                            <div class="blog-post-des">
+                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <strong>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</strong> ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                 
+                            </div>
+      
+                            <div class="blog-comment">
+                                 <h3>2 Comments</h3>
+                                      <div class="media">
+                                           <div class="media-body">
+                                                <h3 class="media-heading">David Jones</h3>
+                                                <span>7 months ago</span>
+                                                <p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur.</p>
+                                           </div>
+                                      </div>
+                            </div>
+   
+                            <div class="blog-comment-form">
+                                 <h3>Leave a Comment</h3>
+                                      <form action="#" method="post">
+                                           <textarea class="form-control" placeholder="Message" rows="5" name"Your Comments" required></textarea>
+                                           <input type="text" class="form-control" placeholder="Name" name="name" required>
+                                           <input type="email" class="form-control" placeholder="Email" name="email" required>
+                                           <div class="col-md-3 col-sm-4">
+                                                <input type="submit" class="form-control" value="Post Your Comment">
+                                           </div>
+                                      </form>
+                            </div>
+                       </div>
+             </div>
         </div>
-    </section> 
+   </section>
     
 <!-- Footer Section -->
 

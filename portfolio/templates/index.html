@@ -47,9 +47,10 @@
             <div class="row">
                 {% for item in portfolios %}
                 <div class="col-md-4 col-sm-6">
-                    <a href="/">
+                    <a href="{% url 'portfolio_detail' item.id %}">
                          <div class="portfolio-thumb">
-                              <img src="{% static '/images/portfolio-img3.jpg' %}" class="img-responsive" alt="Portfolio">
+                            <!-- <img src="{% static '/images/portfolio-img3.jpg' %}" class="img-responsive" alt="Portfolio"> -->
+                            <img src="{% static '/images/portfolio-img3.jpg' %}" class="img-responsive" alt="Portfolio">
                                    <div class="portfolio-overlay">
                                         <div class="portfolio-item">
                                              <h3>{{ item.title|safe|truncatechars:20 }}</h3>
